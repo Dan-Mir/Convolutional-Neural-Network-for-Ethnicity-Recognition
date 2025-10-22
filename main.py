@@ -14,11 +14,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 
-os.makedirs('NMDP', exist_ok=True)
-
-# A numpy array is multidimensional data structure that allows to represent and manipulate data, like images, in Python. 
-# It is extremely efficient for handling large amounts of numerical data.
-
 # Load images from a directory and return them as a numpy array
 def load_images(image_paths, label, image_size=(128, 128)):
     images = []
@@ -37,8 +32,8 @@ def impath(dir):
         if f.endswith('.jpg'):
             yield os.path.join(dir, f)
 
-mediterranean_apex_dir = r"C:\Users\danym\OneDrive - Universita' degli Studi della Campania Luigi Vanvitelli\Università\Laurea Magistrale\First year material\Second semester\Machine Learning and AI\Amsterdam\Still_pictures_Mediterranean_ZIPfile_approx_40Mb\Apex Stills"
-northeuropean_apex_dir = r"C:\Users\danym\OneDrive - Universita' degli Studi della Campania Luigi Vanvitelli\Università\Laurea Magistrale\First year material\Second semester\Machine Learning and AI\Amsterdam\Still_pictures_NorthEuropean_ZIPfile_approx_50Mb\Apex Stills"
+mediterranean_apex_dir = r"data\Still_pictures_Mediterranean_ZIPfile_approx_40Mb\Apex Stills"
+northeuropean_apex_dir = r"data\Still_pictures_NorthEuropean_ZIPfile_approx_50Mb\Apex Stills"
 
 mediterranean_image_paths = [f for f in impath(mediterranean_apex_dir)]
 northeuropean_image_paths = [f for f in impath(northeuropean_apex_dir)]
